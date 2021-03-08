@@ -4,4 +4,4 @@ topnav:
 - title: Topnav
   items:
     - title: GitHub
-      external_url: https://github.com/matuzalemmuller/embedded-bdi
+      external_url: https://github.com/embedded-bdi/embedded-bdi
