@@ -11,17 +11,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Introduction
-      url: /introduction.html
-      output: web, pdf
-      type: homepage
-
     - title: Get Started
       url: /get_started.html
-      output: web, pdf
-
-    - title: Requirements
-      url: /requirements.html
       output: web, pdf
 
     - title: How It Works
