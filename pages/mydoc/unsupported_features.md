@@ -11,10 +11,10 @@ Because this project is based on [Jason](http://jason.sourceforge.net/wp/), it i
 
 Some of the unsupported features are:
 
-* Statements are limited to 256 distinct values due to variables used internally (`uint8_t`);
 * Predicates;
 * Annotations;
-* Unification algorithm for plans' contexts;
+* Advanced unification algorithms;
+* Statements are limited to 256 distinct values due to variables used internally (`uint8_t`);
 * Internal actions;
 * Advanced _troubleshooting_ tools: Mind inspector, Console, Sniffer Agent.
 * Dynamic belief base;

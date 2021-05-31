@@ -13,7 +13,7 @@ Embedded-BDI implements the agent reasoning cycle and necessary libraries to sup
 
 #### Agent Behavior
 
-Agent behavior can be described in the `data/agentspeak.asl` file using AgentSpeak syntax. Be aware of the [limitations](/unsupported_features.html) of the framework; notably the lack of support for predicates. Details about the supported syntax for this file and agent features can be checked on the [Supported Features](/supported_features.html) page.
+Agent behavior can be described in the `data/agentspeak.asl` file using AgentSpeak syntax. Be aware of the [limitations](/unsupported_features.html) of the framework, notably the lack of support for predicates. Details about the supported syntax for this file and agent features can be checked on the [Supported Features](/supported_features.html) page.
 
 <p>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAgentBehavior" aria-expanded="false" aria-controls="collapseAgentBehavior">
@@ -22,7 +22,8 @@ Agent behavior can be described in the `data/agentspeak.asl` file using AgentSpe
 </p>
 <div class="collapse" id="collapseAgentBehavior">
   <div class="card card-body">
-    <pre><code>sunny.
+    <pre><code>!start.
++!start <- +sunny.
 +sunny <- +happy.
 +happy : sunny & money <- buy_ice_cream.</code></pre>
   </div>

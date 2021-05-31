@@ -24,6 +24,26 @@ git clone https://github.com/embedded-bdi/embedded-bdi
 * (Recommended) [Doxygen](https://www.doxygen.nl/index.html) for documentation generation.
 * (Recommended) [Graphviz](https://graphviz.org/) for UML/chart support in documentation.
 
+## Build and run the example agent
+
+The repository contains all the necessary files to run a "Hello world" agent. To compile and run the agent, execute the following:
+
+```
+make agent
+./build/agent.out
+```
+
+The output should be:
+
+```
+Hello!
+I am an agent and I will keep running until I am terminated
+```
+
+Note that the agent is not terminated after executing the `+!hello` plan from the `data/agentspeak.asl` file. Instead, the agent keeps running its main reasoning cycle until it is terminated.
+
+For more details on how agents can be programmed, see [How It Works](/how_it_works.html).
+
 <hr>
 
 ## For Developers:
