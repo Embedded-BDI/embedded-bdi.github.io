@@ -5,15 +5,19 @@ permalink: how_it_works.html
 folder: mydoc
 ---
 
-A basic explanation of how the framework works is provided below. For a complete description of how and why the framework was implemented this way, see [Implementation Details](/implementation_details.html).
+A basic explanation of how the framework works is provided below. For a complete description of the design decisions when implementing the framework, see [Implementation Details](./implementation_details.html).
 
 ### Programming the Agent
 
-Embedded-BDI implements the agent reasoning cycle and necessary libraries to support AgentSpeak syntax. Therefore, users can focus on programming the agent behavior.
+Embedded-BDI implements the agent reasoning cycle and necessary libraries to support AgentSpeak syntax. Therefore, users can focus on programming the agent behavior. To program and compile the agent, three files are required:
+
+* `data/agentspeak.asl`: defines the agent behavior, coded in AgentSpeak;
+* `data/functions.h`: includes the belief update and action functions;
+* `agent.config`: specifies the size of the following internal data structures of the agent: event base, intention base, and intention stack.
 
 #### Agent Behavior
 
-Agent behavior can be described in the `data/agentspeak.asl` file using AgentSpeak syntax. Be aware of the [limitations](/unsupported_features.html) of the framework, notably the lack of support for predicates. Details about the supported syntax for this file and agent features can be checked on the [Supported Features](/supported_features.html) page.
+Agent behavior can be described in the `data/agentspeak.asl` file using AgentSpeak syntax. Be aware of the [limitations](./unsupported_features.html) of the framework, notably the lack of support for predicates. Details about the supported syntax for this file and agent features can be checked on the [Supported Features](./supported_features.html) page.
 
 <p>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAgentBehavior" aria-expanded="false" aria-controls="collapseAgentBehavior">
@@ -23,9 +27,9 @@ Agent behavior can be described in the `data/agentspeak.asl` file using AgentSpe
 <div class="collapse" id="collapseAgentBehavior">
   <div class="card card-body">
     <pre><code>!start.
-+!start <- +sunny.
-+sunny <- +happy.
-+happy : sunny & money <- buy_ice_cream.</code></pre>
++!start <- +happy.
++happy <- !!hello.
++!hello <- say_hello.</code></pre>
   </div>
 </div>
 
@@ -46,12 +50,14 @@ Because hardware used in embedded systems is heteronegeous and I/O interfaces ca
     <pre><code>#ifndef FUNCTIONS_H_
 #define FUNCTIONS_H_<br>
 #include &lt;iostream&gt;<br>
-bool action_buy_ice_cream()
+bool action_say_hello()
 {
-  std::cout << "Yummy!" << std::endl;
+  std::cout << "Hello world!" << std::endl;
+  std::cout << "I am an agent and I will keep running until " <<
+               "I am terminated" << std::endl;
   return true;
-}<br>
-bool update_money(bool var)
+}<br><br>
+bool update_sunny(bool var)
 {
   return true;
 }<br>
@@ -78,7 +84,7 @@ INTENTION_STACK_SIZE=5</code></pre>
 
 ### Compile agent executable
 
-Once the three files are placed on its corresponding locations (`data/functions.h`, `data/agentspeak.asl`, and `agent.config`), the agent executable can be compiled. The build process can be split into two phases:
+Once the three files are placed on its corresponding locations (`data/functions.h`, `data/agentspeak.asl`, and `agent.config`), the agent executable can be compiled. The build process is split into two phases:
 
 1. AgentSpeak translation: first, the `data/agentspeak.asl` file is translated from the AgentSpeak language to a C++ header file (`src/config/configuration.h`).
 2. Agent compilation: once the agent code is translated to a corresponding C++ header file, the agent can be compiled using the Embedded-BDI library and the files provided by the user.
@@ -87,4 +93,4 @@ This process is illustrated by the image below:
 
 <center>{% include image.html file="Compilation.svg" alt="Jekyll" caption="Steps to build agent" %}</center>
 
-Instructions to build and run the agent are available [here](/build_run.html).
+Instructions to build and run the agent are available [here](./build_run.html).

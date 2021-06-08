@@ -63,12 +63,12 @@ entries:
       url: /todo.html
       output: web, pdf
 
-  - title: Example
+  - title: Examples
     output: web
     folderitems:
 
-      - title: Application
-        url: /application.html
+      - title: Simple Application
+        url: /simple_application.html
         output: web, pdf
 
         subfolders:
@@ -76,6 +76,10 @@ entries:
           url: /nodemcu_v3.html
           output: web, pdf
           subfolderitems:
+
+          - title: Vacuum Application
+            url: /application.html
+            output: web, pdf
 
           - title: Hardware
             url: /hardware.html
@@ -99,6 +103,10 @@ entries:
 
     - title: Guide
       url: /guide.html
+      output: web, pdf
+    
+    - title: How to Edit this Website
+      url: /how_to_edit.html
       output: web, pdf
     
   - title: Licensing

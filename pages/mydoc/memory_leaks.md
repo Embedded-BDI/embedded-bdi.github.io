@@ -22,7 +22,8 @@ valgrind --tool=memcheck --leak-check=full --track-origins=yes --verbose --error
 </p>
 <div class="collapse" id="collapseValgrind">
   <div class="card card-body">
-    <pre><code>==1670== Memcheck, a memory error detector
+    <pre><code>valgrind --tool=memcheck --leak-check=full --track-origins=yes --verbose --error-exitcode=1 ./build/valgrind.out<br>
+==1670== Memcheck, a memory error detector
 ==1670== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==1670== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
 ==1670== Command: ./build/valgrind.out

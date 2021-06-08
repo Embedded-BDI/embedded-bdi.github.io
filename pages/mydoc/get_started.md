@@ -36,13 +36,13 @@ make agent
 The output should be:
 
 ```
-Hello!
+Hello world!
 I am an agent and I will keep running until I am terminated
 ```
 
 Note that the agent is not terminated after executing the `+!hello` plan from the `data/agentspeak.asl` file. Instead, the agent keeps running its main reasoning cycle until it is terminated.
 
-For more details on how agents can be programmed, see [How It Works](/how_it_works.html).
+For more details on how agents can be programmed, see [How It Works](./how_it_works.html).
 
 <hr>
 
@@ -50,11 +50,11 @@ For more details on how agents can be programmed, see [How It Works](/how_it_wor
 
 ### Install Development Tools
 
-* Checking memory leaks: [Valgrind](https://valgrind.org/)
+* Checking for memory leaks: [Valgrind](https://valgrind.org/)
 * Generating documentation: [Doxygen](https://www.doxygen.nl/index.html)
 * Generating graphs in documentation: [Graphviz](https://graphviz.org/)
 
 ### (Optional) Install Eclipse CDT
 
 [Eclipse CDT](https://www.eclipse.org/cdt/) can be used for development. To import the project into Eclipse, click on "File" -> "Import" -> "Existing Projects into Workspace". Make sure to select the root `embedded-bdi` directory so all projects are imported.
-* Note: Launchers for the compiling and running the Agent and Unit Tests are already available in the project, so you should be good to go.
+* *Note: Launchers for the compiling and running the Agent and Unit Tests are already available in the project*

@@ -9,16 +9,16 @@ folder: mydoc
 
 The supporting library used for unit testing is [GoogleTest](https://github.com/google/googletest). Note that the GoogleTest header and implementation files are already included in the Embedded-BDI repository at `test/external/gtest`, so no additional installation is needed.
 
-All Embedded-BDI library classes have corresponding multiple unit tests, available in the `tests/` folder.
+All Embedded-BDI library classes have corresponding unit tests, available in the `tests/` folder.
 
 To compile the test executable, run `make tests`. The resulting executable file will be available at `build/unittest.out`. Alternatively, you can use the `UnitTests.launch` launcher file in Eclipse CDT to both build and run the testing routine. 
 
 <p>
-  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseStatementUTest" aria-expanded="false" aria-controls="collapseStatementUTest">
-    Example: Unit test file for Statement class
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePropositionUTest" aria-expanded="false" aria-controls="collapsePropositionUTest">
+    Example: Unit test file for Proposition class
   </button>
 </p>
-<div class="collapse" id="collapseStatementUTest">
+<div class="collapse" id="collapsePropositionUTest">
   <div class="card card-body">
     <pre><code>/*
  * proposition_test.cpp
@@ -74,7 +74,8 @@ TEST_F(TProposition, is_equal_to)
 </p>
 <div class="collapse" id="collapseUnitTests">
   <div class="card card-body">
-    <pre><code>[==========] Running 71 tests from 28 test suites.
+    <pre><code>./build/unittest.out<br>
+[==========] Running 71 tests from 28 test suites.
 [----------] Global test environment set-up.
 [----------] 1 test from TNBSubgoalFailedPlan
 [ RUN      ] TNBSubgoalFailedPlan.fail_intention

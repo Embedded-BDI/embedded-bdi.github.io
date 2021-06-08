@@ -13,8 +13,8 @@ Some of the unsupported features are:
 
 * Predicates;
 * Annotations;
-* Advanced unification algorithms;
-* Statements are limited to 256 distinct values due to variables used internally (`uint8_t`);
+* Unification algorithm to handle operators such as the logical *or*, logical *not*, and parenthesis for logical precedence;
+* Propositions are limited to 256 distinct values due to variables used internally (variable type is `uint8_t`, which uses 8 bits);
 * Internal actions;
 * Advanced _troubleshooting_ tools: Mind inspector, Console, Sniffer Agent.
 * Dynamic belief base;
