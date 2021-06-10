@@ -11,9 +11,9 @@ It is recommended that users are familiar with the [AgentSpeak](https://en.wikip
 
 ## Clone the repository
 
-Clone the [embedded-bdi](https://github.com/embedded-bdi/embedded-bdi) repository:
+Download the [source code](https://github.com/Embedded-BDI/embedded-bdi/releases/tag/v1.0.0) or clone the git repository:
 
-```sh
+```
 git clone https://github.com/embedded-bdi/embedded-bdi
 ```
 

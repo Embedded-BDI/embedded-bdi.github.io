@@ -15,7 +15,7 @@ Version history:
 
 * Version 1.0.0: Initial release
   * Master's thesis: BDI agents for Embedded Systems
-  * Student/Researcher/Developer: [Matuzalem Muller dos Santos](https://matuzalemmuller.com)
+  * Researcher/Developer: [Matuzalem Muller dos Santos](https://matuzalemmuller.com)
   * Supervisors:
     * [Jomi Fred Hübner](http://jomi.das.ufsc.br//)
     * [Maiquel de Brito](https://github.com/maiquelb)

@@ -21,4 +21,4 @@ Embedded-BDI is distributed via the [GPL-3.0 License](./license.html).
 
 Version history:
 
-* v1.0.0 - [Matuzalem Muller dos Santos](https://matuzalemmuller.com) Masters Dissertation
+* v1.0.0 - Author: [Matuzalem Muller dos Santos](https://matuzalemmuller.com)

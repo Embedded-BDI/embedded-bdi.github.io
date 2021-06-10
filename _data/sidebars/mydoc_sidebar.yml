@@ -67,8 +67,8 @@ entries:
     output: web
     folderitems:
 
-      - title: Simple Application
-        url: /simple_application.html
+      - title: Vacuum Cleaner Example
+        url: /vacuum_cleaner_example.html
         output: web, pdf
 
         subfolders:
@@ -77,7 +77,7 @@ entries:
           output: web, pdf
           subfolderitems:
 
-          - title: Vacuum Application
+          - title: Vacuum Cleaner Application
             url: /application.html
             output: web, pdf
 
