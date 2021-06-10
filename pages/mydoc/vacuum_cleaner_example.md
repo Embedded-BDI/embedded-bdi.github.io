@@ -1,5 +1,5 @@
 ---
-title: Vaccum Cleaner Example
+title: Vacuum Cleaner Example
 sidebar: mydoc_sidebar
 permalink: vacuum_cleaner_example.html
 folder: mydoc
