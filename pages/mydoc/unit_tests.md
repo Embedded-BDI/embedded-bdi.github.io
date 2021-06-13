@@ -11,7 +11,7 @@ The supporting library used for unit testing is [GoogleTest](https://github.com/
 
 All Embedded-BDI library classes have corresponding unit tests, available in the `tests/` folder.
 
-To compile the test executable, run `make tests`. The resulting executable file will be available at `build/unittest.out`. Alternatively, you can use the `UnitTests.launch` launcher file in Eclipse CDT to both build and run the testing routine. 
+To compile the test executable, run `make tests`. The resulting executable file will be available at `build/unittest.out`. Alternatively, you can use the `UnitTests.launch` launcher file in Eclipse CDT to build and run the testing routine.
 
 <p>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePropositionUTest" aria-expanded="false" aria-controls="collapsePropositionUTest">
@@ -20,7 +20,7 @@ To compile the test executable, run `make tests`. The resulting executable file 
 </p>
 <div class="collapse" id="collapsePropositionUTest">
   <div class="card card-body">
-    <pre><code>/*
+    <pre><code><div style="height:400px;overflow:auto;padding:3%">/*
  * proposition_test.cpp
  *
  *  Created on: Jun 28, 2020
@@ -63,7 +63,7 @@ TEST_F(TProposition, is_equal_to)
   Proposition equal(0);
   EXPECT_TRUE(prop->is_equal(equal));
   EXPECT_TRUE(prop->is_equal(&equal));
-}</code></pre>
+}</div></code></pre>
   </div>
 </div>
 
@@ -74,7 +74,7 @@ TEST_F(TProposition, is_equal_to)
 </p>
 <div class="collapse" id="collapseUnitTests">
   <div class="card card-body">
-    <pre><code>./build/unittest.out<br>
+    <pre><code><div style="height:500px;overflow:auto;padding:3%">./build/unittest.out<br>
 [==========] Running 71 tests from 28 test suites.
 [----------] Global test environment set-up.
 [----------] 1 test from TNBSubgoalFailedPlan
@@ -305,6 +305,6 @@ TEST_F(TProposition, is_equal_to)
 
 [----------] Global test environment tear-down
 [==========] 71 tests from 28 test suites ran. (2 ms total)
-[  PASSED  ] 71 tests.</code></pre>
+[  PASSED  ] 71 tests.</div></code></pre>
   </div>
 </div>

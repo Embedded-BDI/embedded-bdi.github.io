@@ -78,19 +78,15 @@ entries:
           subfolderitems:
 
           - title: Vacuum Cleaner Application
-            url: /application.html
+            url: /nodemcuv3_vacuum.html
             output: web, pdf
 
           - title: Hardware
-            url: /hardware.html
+            url: /nodemcuv3_hardware.html
             output: web, pdf
 
           - title: Software
-            url: /software.html
-            output: web, pdf
-
-          - title: Results
-            url: /results.html
+            url: /nodemcuv3_software.html
             output: web, pdf
 
   - title: Contributing

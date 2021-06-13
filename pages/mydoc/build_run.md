@@ -9,7 +9,7 @@ folder: mydoc
 
 ## Build
 
-A Makefile is available with the necessary targets to build the agent. More information about the each target is available below.
+A Makefile is available with the necessary targets to build the agent. More information about each target is available below.
 
 ### translate
 
@@ -22,7 +22,7 @@ The `translate` target converts the AgentSpeak code file to the C++ header. This
 </p>
 <div class="collapse" id="collapseTranslate">
   <div class="card card-body">
-    <pre><code>make translate<br>
+    <pre><code><div style="height:300px;overflow:auto;padding:3%">make translate<br>
 javac -cp lib/parser/lib/jason-2.6.jar                                    \
             lib/parser/src/translator/As2Json.java                          \
             lib/parser/src/translator/PlanSkeleton.java                     \
@@ -84,7 +84,7 @@ Proposition:
 	hello
 Context:
 Body:
-	[ACTION, say_hello, null]</code></pre>
+	[ACTION, say_hello, null]</div></code></pre>
   </div>
 </div>
 
@@ -100,7 +100,7 @@ Invokes the `translate` target, and subsequently compiles the agent, taking the 
 </p>
 <div class="collapse" id="collapseAgent">
   <div class="card card-body">
-    <pre><code>make agent<br>
+    <pre><code><div style="height:300px;overflow:auto;padding:3%">make agent<br>
 javac -cp lib/parser/lib/jason-2.6.jar                                    \
             lib/parser/src/translator/As2Json.java                          \
             lib/parser/src/translator/PlanSkeleton.java                     \
@@ -200,7 +200,7 @@ mkdir -p build/./lib/syntax/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/bdi -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/lib -I./lib/syntax -I./test -I./test/utest -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/agent -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/empty_event_base -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/simple_intention -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/multiple_intentions -I./test/utest/lib -I./test/utest/syntax -I./test/utest/syntax/body_test -I./test/utest/syntax/plan_test -I./test/test_lib -I./test/external -I./test/external/gtest  -c lib/syntax/proposition.cpp -o build/./lib/syntax/proposition.cpp.o
 mkdir -p build/./src/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/bdi -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/lib -I./lib/syntax -I./test -I./test/utest -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/agent -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/empty_event_base -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/simple_intention -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/multiple_intentions -I./test/utest/lib -I./test/utest/syntax -I./test/utest/syntax/body_test -I./test/utest/syntax/plan_test -I./test/test_lib -I./test/external -I./test/external/gtest  -c src/agent_loop.cpp -o build/./src/agent_loop.cpp.o
-g++ ./build/./lib/bdi/instantiated_plan.cpp.o ./build/./lib/bdi/belief_base.cpp.o ./build/./lib/bdi/belief.cpp.o ./build/./lib/bdi/plan_base.cpp.o ./build/./lib/bdi/intention_base.cpp.o ./build/./lib/bdi/intention.cpp.o ./build/./lib/bdi/event.cpp.o ./build/./lib/bdi/event_base.cpp.o ./build/./lib/agent/agent.cpp.o ./build/./lib/lib/event_id.cpp.o ./build/./lib/syntax/body_return.cpp.o ./build/./lib/syntax/plan.cpp.o ./build/./lib/syntax/context_condition.cpp.o ./build/./lib/syntax/context.cpp.o ./build/./lib/syntax/body_instruction.cpp.o ./build/./lib/syntax/body.cpp.o ./build/./lib/syntax/proposition.cpp.o ./build/./src/agent_loop.cpp.o -o build/agent.out</code></pre>
+g++ ./build/./lib/bdi/instantiated_plan.cpp.o ./build/./lib/bdi/belief_base.cpp.o ./build/./lib/bdi/belief.cpp.o ./build/./lib/bdi/plan_base.cpp.o ./build/./lib/bdi/intention_base.cpp.o ./build/./lib/bdi/intention.cpp.o ./build/./lib/bdi/event.cpp.o ./build/./lib/bdi/event_base.cpp.o ./build/./lib/agent/agent.cpp.o ./build/./lib/lib/event_id.cpp.o ./build/./lib/syntax/body_return.cpp.o ./build/./lib/syntax/plan.cpp.o ./build/./lib/syntax/context_condition.cpp.o ./build/./lib/syntax/context.cpp.o ./build/./lib/syntax/body_instruction.cpp.o ./build/./lib/syntax/body.cpp.o ./build/./lib/syntax/proposition.cpp.o ./build/./src/agent_loop.cpp.o -o build/agent.out</div></code></pre>
   </div>
 </div>
 
@@ -222,7 +222,7 @@ rm -f -r ./docs/html</code></pre>
 
 ### tests
 
-Compiles unit test suite for Embedded-BDI library. [GoogleTest](https://github.com/google/googletest) is used for testing and is already included in the repository. The executable will be available at `build/unitest.out`.
+Compiles unit test suite for Embedded-BDI library. [GoogleTest](https://github.com/google/googletest) is used for testing and is already included in the repository. The executable will be available at `build/unittest.out`.
 
 <p>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseTests" aria-expanded="false" aria-controls="collapseTests">
@@ -231,7 +231,7 @@ Compiles unit test suite for Embedded-BDI library. [GoogleTest](https://github.c
 </p>
 <div class="collapse" id="collapseTests">
   <div class="card card-body">
-    <pre><code>make tests<br>
+    <pre><code><div style="height:300px;overflow:auto;padding:3%">make tests<br>
 mkdir -p build/./lib/bdi/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/bdi -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/lib -I./lib/syntax -I./test -I./test/utest -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/agent -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/empty_event_base -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/simple_intention -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/multiple_intentions -I./test/utest/lib -I./test/utest/syntax -I./test/utest/syntax/body_test -I./test/utest/syntax/plan_test -I./test/test_lib -I./test/external -I./test/external/gtest  -c lib/bdi/instantiated_plan.cpp -o build/./lib/bdi/instantiated_plan.cpp.o
 mkdir -p build/./lib/bdi/
@@ -326,13 +326,13 @@ mkdir -p build/./test/utest/syntax/plan_test/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/bdi -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/lib -I./lib/syntax -I./test -I./test/utest -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/agent -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/empty_event_base -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/simple_intention -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/multiple_intentions -I./test/utest/lib -I./test/utest/syntax -I./test/utest/syntax/body_test -I./test/utest/syntax/plan_test -I./test/test_lib -I./test/external -I./test/external/gtest  -c test/utest/syntax/plan_test/plan_test.cpp -o build/./test/utest/syntax/plan_test/plan_test.cpp.o
 mkdir -p build/./test/external/gtest/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/bdi -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/lib -I./lib/syntax -I./test -I./test/utest -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/agent -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/empty_event_base -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/simple_intention -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/multiple_intentions -I./test/utest/lib -I./test/utest/syntax -I./test/utest/syntax/body_test -I./test/utest/syntax/plan_test -I./test/test_lib -I./test/external -I./test/external/gtest  -c test/external/gtest/gtest-all.cc -o build/./test/external/gtest/gtest-all.cc.o
-g++ ./build/./lib/bdi/instantiated_plan.cpp.o ./build/./lib/bdi/belief_base.cpp.o ./build/./lib/bdi/belief.cpp.o ./build/./lib/bdi/plan_base.cpp.o ./build/./lib/bdi/intention_base.cpp.o ./build/./lib/bdi/intention.cpp.o ./build/./lib/bdi/event.cpp.o ./build/./lib/bdi/event_base.cpp.o ./build/./lib/agent/agent.cpp.o ./build/./lib/lib/event_id.cpp.o ./build/./lib/syntax/body_return.cpp.o ./build/./lib/syntax/plan.cpp.o ./build/./lib/syntax/context_condition.cpp.o ./build/./lib/syntax/context.cpp.o ./build/./lib/syntax/body_instruction.cpp.o ./build/./lib/syntax/body.cpp.o ./build/./lib/syntax/proposition.cpp.o ./build/./test/utest/bdi/belief_base_test.cpp.o ./build/./test/utest/bdi/intention_base_test/intention_base_test.cpp.o ./build/./test/utest/bdi/instantiated_plan_test.cpp.o ./build/./test/utest/bdi/plan_base_test.cpp.o ./build/./test/utest/bdi/belief_test.cpp.o ./build/./test/utest/bdi/event_test.cpp.o ./build/./test/utest/bdi/intention_test/intention_test.cpp.o ./build/./test/utest/bdi/event_base_test.cpp.o ./build/./test/utest/agent/nb_subgoal_full_intention_base/nb_subgoal_full_intention_base.cpp.o ./build/./test/utest/agent/empty_event_base/empty_event_base_test.cpp.o ./build/./test/utest/agent/overflow_intention_base/overflow_intention_base_test.cpp.o ./build/./test/utest/agent/overflow_stacked_intention/overflow_stacked_intention.cpp.o ./build/./test/utest/agent/simple_intention/simple_intention_test.cpp.o ./build/./test/utest/agent/failed_intention/failed_intention_test.cpp.o ./build/./test/utest/agent/nb_subgoal_failed_plan/nb_subgoal_failed_plan.cpp.o ./build/./test/utest/agent/stacked_intention/stacked_intention.cpp.o ./build/./test/utest/agent/nb_subgoal_empty_intention_base/nb_subgoal_empty_intention_base.cpp.o ./build/./test/utest/agent/fill_event_base/fill_event_base_test.cpp.o ./build/./test/utest/agent/multiple_intentions/multiple_intentions_test.cpp.o ./build/./test/utest/lib/event_id_test.cpp.o ./build/./test/utest/lib/vector_queue_test.cpp.o ./build/./test/utest/AllTests.cpp.o ./build/./test/utest/syntax/context_condition_test.cpp.o ./build/./test/utest/syntax/proposition_test.cpp.o ./build/./test/utest/syntax/body_test/body_test.cpp.o ./build/./test/utest/syntax/body_instruction_test.cpp.o ./build/./test/utest/syntax/context_test.cpp.o ./build/./test/utest/syntax/body_return_test.cpp.o ./build/./test/utest/syntax/plan_test/plan_test.cpp.o ./build/./test/external/gtest/gtest-all.cc.o -o build/unittest.out</code></pre>
+g++ ./build/./lib/bdi/instantiated_plan.cpp.o ./build/./lib/bdi/belief_base.cpp.o ./build/./lib/bdi/belief.cpp.o ./build/./lib/bdi/plan_base.cpp.o ./build/./lib/bdi/intention_base.cpp.o ./build/./lib/bdi/intention.cpp.o ./build/./lib/bdi/event.cpp.o ./build/./lib/bdi/event_base.cpp.o ./build/./lib/agent/agent.cpp.o ./build/./lib/lib/event_id.cpp.o ./build/./lib/syntax/body_return.cpp.o ./build/./lib/syntax/plan.cpp.o ./build/./lib/syntax/context_condition.cpp.o ./build/./lib/syntax/context.cpp.o ./build/./lib/syntax/body_instruction.cpp.o ./build/./lib/syntax/body.cpp.o ./build/./lib/syntax/proposition.cpp.o ./build/./test/utest/bdi/belief_base_test.cpp.o ./build/./test/utest/bdi/intention_base_test/intention_base_test.cpp.o ./build/./test/utest/bdi/instantiated_plan_test.cpp.o ./build/./test/utest/bdi/plan_base_test.cpp.o ./build/./test/utest/bdi/belief_test.cpp.o ./build/./test/utest/bdi/event_test.cpp.o ./build/./test/utest/bdi/intention_test/intention_test.cpp.o ./build/./test/utest/bdi/event_base_test.cpp.o ./build/./test/utest/agent/nb_subgoal_full_intention_base/nb_subgoal_full_intention_base.cpp.o ./build/./test/utest/agent/empty_event_base/empty_event_base_test.cpp.o ./build/./test/utest/agent/overflow_intention_base/overflow_intention_base_test.cpp.o ./build/./test/utest/agent/overflow_stacked_intention/overflow_stacked_intention.cpp.o ./build/./test/utest/agent/simple_intention/simple_intention_test.cpp.o ./build/./test/utest/agent/failed_intention/failed_intention_test.cpp.o ./build/./test/utest/agent/nb_subgoal_failed_plan/nb_subgoal_failed_plan.cpp.o ./build/./test/utest/agent/stacked_intention/stacked_intention.cpp.o ./build/./test/utest/agent/nb_subgoal_empty_intention_base/nb_subgoal_empty_intention_base.cpp.o ./build/./test/utest/agent/fill_event_base/fill_event_base_test.cpp.o ./build/./test/utest/agent/multiple_intentions/multiple_intentions_test.cpp.o ./build/./test/utest/lib/event_id_test.cpp.o ./build/./test/utest/lib/vector_queue_test.cpp.o ./build/./test/utest/AllTests.cpp.o ./build/./test/utest/syntax/context_condition_test.cpp.o ./build/./test/utest/syntax/proposition_test.cpp.o ./build/./test/utest/syntax/body_test/body_test.cpp.o ./build/./test/utest/syntax/body_instruction_test.cpp.o ./build/./test/utest/syntax/context_test.cpp.o ./build/./test/utest/syntax/body_return_test.cpp.o ./build/./test/utest/syntax/plan_test/plan_test.cpp.o ./build/./test/external/gtest/gtest-all.cc.o -o build/unittest.out</div></code></pre>
   </div>
 </div>
 
 ### valgrind
 
-Compiles custom agent code to check for memory leaks. Executable will be available at `build/valgrind.out`. More information about checking for memory leaks is available [here](./memory_leaks.html).
+Compiles custom agent code to check for memory leaks. The executable will be available at `build/valgrind.out`. More information about checking for memory leaks is available [here](./memory_leaks.html).
 
 <p>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseValgrind" aria-expanded="false" aria-controls="collapseValgrind">
@@ -341,7 +341,7 @@ Compiles custom agent code to check for memory leaks. Executable will be availab
 </p>
 <div class="collapse" id="collapseValgrind">
   <div class="card card-body">
-    <pre><code>make valgrind<br>
+    <pre><code><div style="height:300px;overflow:auto;padding:3%">make valgrind<br>
 mkdir -p build/./lib/agent/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/bdi -I./lib/syntax -I./lib/lib -I./test -I./test/external -I./test/external/gtest -I./test/utest -I./test/utest/agent -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/empty_event_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/multiple_intentions -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/simple_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/syntax -I./test/utest/syntax/plan_test -I./test/utest/syntax/body_test -I./test/utest/lib -I./test/test_lib  -c lib/agent/agent.cpp -o build/./lib/agent/agent.cpp.o
 mkdir -p build/./lib/bdi/
@@ -378,7 +378,7 @@ mkdir -p build/./lib/lib/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/bdi -I./lib/syntax -I./lib/lib -I./test -I./test/external -I./test/external/gtest -I./test/utest -I./test/utest/agent -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/empty_event_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/multiple_intentions -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/simple_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/syntax -I./test/utest/syntax/plan_test -I./test/utest/syntax/body_test -I./test/utest/lib -I./test/test_lib  -c lib/lib/event_id.cpp -o build/./lib/lib/event_id.cpp.o
 mkdir -p build/./valgrind/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/bdi -I./lib/syntax -I./lib/lib -I./test -I./test/external -I./test/external/gtest -I./test/utest -I./test/utest/agent -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/empty_event_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/multiple_intentions -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/simple_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/syntax -I./test/utest/syntax/plan_test -I./test/utest/syntax/body_test -I./test/utest/lib -I./test/test_lib  -c valgrind/valgrind.cpp -o build/./valgrind/valgrind.cpp.o
-g++ ./build/./lib/agent/agent.cpp.o ./build/./lib/bdi/intention_base.cpp.o ./build/./lib/bdi/plan_base.cpp.o ./build/./lib/bdi/belief.cpp.o ./build/./lib/bdi/event_base.cpp.o ./build/./lib/bdi/event.cpp.o ./build/./lib/bdi/instantiated_plan.cpp.o ./build/./lib/bdi/intention.cpp.o ./build/./lib/bdi/belief_base.cpp.o ./build/./lib/syntax/context.cpp.o ./build/./lib/syntax/body_instruction.cpp.o ./build/./lib/syntax/proposition.cpp.o ./build/./lib/syntax/body_return.cpp.o ./build/./lib/syntax/plan.cpp.o ./build/./lib/syntax/context_condition.cpp.o ./build/./lib/syntax/body.cpp.o ./build/./lib/lib/event_id.cpp.o ./build/./valgrind/valgrind.cpp.o -o build/valgrind.out</code></pre>
+g++ ./build/./lib/agent/agent.cpp.o ./build/./lib/bdi/intention_base.cpp.o ./build/./lib/bdi/plan_base.cpp.o ./build/./lib/bdi/belief.cpp.o ./build/./lib/bdi/event_base.cpp.o ./build/./lib/bdi/event.cpp.o ./build/./lib/bdi/instantiated_plan.cpp.o ./build/./lib/bdi/intention.cpp.o ./build/./lib/bdi/belief_base.cpp.o ./build/./lib/syntax/context.cpp.o ./build/./lib/syntax/body_instruction.cpp.o ./build/./lib/syntax/proposition.cpp.o ./build/./lib/syntax/body_return.cpp.o ./build/./lib/syntax/plan.cpp.o ./build/./lib/syntax/context_condition.cpp.o ./build/./lib/syntax/body.cpp.o ./build/./lib/lib/event_id.cpp.o ./build/./valgrind/valgrind.cpp.o -o build/valgrind.out</div></code></pre>
   </div>
 </div>
 
@@ -393,7 +393,7 @@ Generates documentation for Embedded-BDI API. Requires [Doxygen](https://www.dox
 </p>
 <div class="collapse" id="collapseDocs">
   <div class="card card-body">
-    <pre><code>make docs<br>
+    <pre><code><div style="height:300px;overflow:auto;padding:3%">make docs<br>
 if [ -d "/Applications/Doxygen.app/Contents/Resources" ];                 \
   then                                                                      \
     cd ./docs;                                                         \
@@ -873,7 +873,7 @@ Patching output file 140/142
 Patching output file 141/142
 Patching output file 142/142
 lookup cache used 259/65536 hits=1060 misses=279
-finished...</code></pre>
+finished...</div></code></pre>
   </div>
 </div>
 
@@ -888,7 +888,7 @@ Invokes the targets `tests`, `valgrind`, `agent`, and `docs`.
 </p>
 <div class="collapse" id="collapseAll">
   <div class="card card-body">
-    <pre><code>make all<br>
+    <pre><code><div style="height:300px;overflow:auto;padding:3%">make all<br>
 mkdir -p build/./lib/agent/
 g++ -std=c++11 -Os -Wall -DGTEST_HAS_PTHREAD=0   -I./lib -I./lib/agent -I./lib/parser -I./lib/parser/lib -I./lib/parser/src -I./lib/parser/src/translator -I./lib/bdi -I./lib/syntax -I./lib/lib -I./test -I./test/external -I./test/external/gtest -I./test/utest -I./test/utest/agent -I./test/utest/agent/nb_subgoal_failed_plan -I./test/utest/agent/stacked_intention -I./test/utest/agent/overflow_stacked_intention -I./test/utest/agent/empty_event_base -I./test/utest/agent/fill_event_base -I./test/utest/agent/failed_intention -I./test/utest/agent/nb_subgoal_full_intention_base -I./test/utest/agent/multiple_intentions -I./test/utest/agent/overflow_intention_base -I./test/utest/agent/simple_intention -I./test/utest/agent/nb_subgoal_empty_intention_base -I./test/utest/bdi -I./test/utest/bdi/intention_base_test -I./test/utest/bdi/intention_test -I./test/utest/syntax -I./test/utest/syntax/plan_test -I./test/utest/syntax/body_test -I./test/utest/lib -I./test/test_lib  -c lib/agent/agent.cpp -o build/./lib/agent/agent.cpp.o
 mkdir -p build/./lib/bdi/
@@ -1544,10 +1544,10 @@ Patching output file 140/142
 Patching output file 141/142
 Patching output file 142/142
 lookup cache used 259/65536 hits=1060 misses=279
-finished...</code></pre>
+finished...</div></code></pre>
   </div>
 </div>
 
 ## Run the Agent
 
-The agent executable is located at `build/agent.out`. For Unix-like systems, simply run `./agent.out` to start the agent.
+The agent executable is located at `build/agent.out`. For Unix-like systems, run `./agent.out` to start the agent.

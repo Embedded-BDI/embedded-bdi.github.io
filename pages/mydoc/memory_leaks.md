@@ -22,7 +22,7 @@ valgrind --tool=memcheck --leak-check=full --track-origins=yes --verbose --error
 </p>
 <div class="collapse" id="collapseValgrind">
   <div class="card card-body">
-    <pre><code>valgrind --tool=memcheck --leak-check=full --track-origins=yes --verbose --error-exitcode=1 ./build/valgrind.out<br>
+    <pre><code><div style="height:500px;overflow:auto;padding:3%">valgrind --tool=memcheck --leak-check=full --track-origins=yes --verbose --error-exitcode=1 ./build/valgrind.out<br>
 ==1670== Memcheck, a memory error detector
 ==1670== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==1670== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
@@ -143,6 +143,6 @@ valgrind --tool=memcheck --leak-check=full --track-origins=yes --verbose --error
 ==1670== 
 ==1670== All heap blocks were freed -- no leaks are possible
 ==1670== 
-==1670== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)</code></pre>
+==1670== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)</div></code></pre>
   </div>
 </div>

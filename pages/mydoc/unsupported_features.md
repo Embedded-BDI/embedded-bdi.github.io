@@ -7,7 +7,7 @@ folder: mydoc
 
 <br>
 
-Because this project is based on [Jason](http://jason.sourceforge.net/wp/), it is important to list some of features available on Jason that have not yet been implemented in Embedded-BDI.
+Because this project is based on [Jason](http://jason.sourceforge.net/wp/), it is important to list some of the features available on Jason that have not yet been implemented in Embedded-BDI.
 
 Some of the unsupported features are:
 
