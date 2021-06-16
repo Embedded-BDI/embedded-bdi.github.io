@@ -11,7 +11,7 @@ This project is based on the [Jason](http://jason.sourceforge.net/wp/) interpret
 
 Users can go to the [Get Started](./get_started.html) page to learn how to use this framework, and developers can read more about how the project works on the [Implementation Details](./implementation_details.html) page.
 
-Please review the [Contributing](./guide.html) document if you wish to collaborate to this project.
+Please review the [Contributing](./guide.html) document if you wish to collaborate on this project.
 
 Embedded-BDI is distributed via the [GPL-3.0 License](./license.html).
 
