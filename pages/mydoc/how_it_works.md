@@ -91,6 +91,6 @@ Once the three files are placed on their corresponding locations (`data/function
 
 This process is illustrated by the image below:
 
-<center>{% include image.html file="compilation.svg" caption="Steps to build agent" %}</center>
+<center>{% include image.html file="compilation.png" caption="Steps to build agent" %}</center>
 
 Instructions to build and run the agent are available [here](./build_run.html).
